@@ -4,6 +4,7 @@
 }
 .App {
 	text-align: center;
+  height: 100vh;
 }
 header {
 	background-color: darkslategrey;
@@ -11,4 +12,8 @@ header {
 }
 header a img {
 	width: 2rem;
+}
+#content-container {
+  background-color: rgb(218, 229, 252);
+  min-height: calc(100% - 5rem);
 }
