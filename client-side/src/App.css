@@ -1,10 +1,10 @@
 * {
-	margin: 0 auto;
+	margin: 0;
 	box-sizing: border-box;
 }
 .App {
 	text-align: center;
-  height: 100vh;
+	height: 100vh;
 }
 header {
 	background-color: darkslategrey;
@@ -14,6 +14,18 @@ header a img {
 	width: 2rem;
 }
 #content-container {
-  background-color: rgb(218, 229, 252);
-  min-height: calc(100% - 5rem);
+	background-color: rgb(218, 229, 252);
+	min-height: calc(100% - 5rem);
+}
+#story-container {
+	margin: 0 auto;
+	padding: 5rem;
+	width: 70%;
+	text-align: left;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+input {
+	border: none;
 }
