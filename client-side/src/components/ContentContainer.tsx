@@ -1,5 +1,6 @@
 import React from "react";
 import Story from './Story'
+import StoryPrompts from "./StoryPrompts";
 
 /**
  * Todo:
@@ -10,6 +11,7 @@ import Story from './Story'
 
 function ContentContainer() {
 	return <section id="content-container">
+        <StoryPrompts />
         <Story />
     </section>;
 }

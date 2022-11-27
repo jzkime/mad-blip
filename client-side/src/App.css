@@ -27,5 +27,11 @@ header a img {
 	gap: 1rem;
 }
 input {
+  height: 1.2em;
+  display: inline-block;
 	border: none;
+  padding: 0.em;
+}
+input:focus {
+	outline: none;
 }
