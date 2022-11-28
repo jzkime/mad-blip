@@ -10,11 +10,9 @@ function Story() {
 				loved friend of a __adj_ wizard named _2__. While the beginning of this story seems
 				rather directed to the creature1, this wizard was not like any small town wizard
 				that you might have heard about. This wizard was best known for their proficiency in
-				__3__, where at any given moment, they would love to break conversation and give
-				explicit detail about __3__. This is not to say that they were not truthful in their
-				level of such a skill, not at all, they were entirely masterful. However, this fixed
-				admiration would sometimes be to their own detriment, for they would be so happy
-				partaking in this hobby, that they soon began to not think of anything else.
+				__3__, in which they were entirely masterful. However, this fixed admiration would
+				sometimes be to their own detriment, as they would be so happy partaking in this
+				hobby, that they soon began to not think of anything else.
 			</p>
 			<p>
 				Now, back to __petName__. __petName__ decided one day to venture out and bring their
@@ -30,10 +28,10 @@ function Story() {
 			</p>
 			<p>
 				{" "}
-				Now, the path from their __home__ to _place_ was a _adj_ sort of road, where beings
-				of magic and trickery would do anything to get an unfortunate traveler's attention.
-				One such being, a _creature_, _past tense verb_ out in front of our heroes, and said
-				to them “__phrase__”.
+				Now, the trail from their __home__ to _place_ was _adj_, where beings of magic and
+				trickery would appear out of seemingly nowhere, and do anything to get an
+				unfortunate traveler's attention. One such being, a _creature_, _past tense verb_
+				out in front of our heroes, and said to them “__phrase__”.
 			</p>
 			<p>
 				Having no idea how to respond to this, _wizardName_ simply _verb_. The creature
@@ -48,10 +46,11 @@ function Story() {
 				on their _outfit_ they would not stop.{" "}
 			</p>
 			<p>
-				However, as the story continued, the wizard began to notice the glazed over look in
-				this creature’s eyes, and wizardName_’s enthusiasm began to waver. Unfamiliar with
+				However, as the story continued, the wizard noticed the creature had spotted another
+				unsuspecting victim, to which their talons of social entrapment were now being aimed
+				in the other direction. This made wizardName_’s enthusiasm waver. Unfamiliar with
 				this sensation since they found their love of this hobby, their heart began to
-				_verb_.{" "}
+				_verb_.
 			</p>
 			<p>
 				As _wizardName_ was caught up in this moment, and the fog in the creature’s eyes a
