@@ -4,15 +4,16 @@ import { AllWords } from "../interfaces";
 
 interface PropWords {
 	currentWords: AllWords;
+	isStoryHidden: boolean;
 }
 
-const Story: React.FC<PropWords> = ({ currentWords }) => {
+const Story: React.FC<PropWords> = ({ isStoryHidden, currentWords }) => {
 	const { petName, wizardName,creature1, creature2, adj1, adj2, adv, noun1, noun2, noun3, pastV1, pastV2, pastV3, presentV1, presentV2,
 		destination, home, specialty, timeOfDay, timeOfYear, phrase1, phrase2, outfit, emotion } = currentWords;
 
 
 	return (
-		<div id="story-container">
+		<div className={`story-container`}>
 			<p>
 				Once upon a time, there lived a <b>{creature1 || "creature"}</b> named{" "}
 				<b>{petName || "name"}</b>. {petName || "name"} was the loved friend of a{" "}

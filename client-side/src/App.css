@@ -20,23 +20,24 @@ header a img {
 	flex-wrap: wrap;
 	justify-content: center;
 }
-#story-container, #story-prompt-container {
+#content-right, #story-prompt-container {
 	padding: 3rem;
 	width: 50rem;
 	margin: 0 auto;
 }
-#story-container,
-#prompt-form {
+.story-container,
+#prompt-form, #story-prompt-container {
 	text-align: left;
 	display: flex;
-	gap: 1rem;
+	gap: 1em;
 }
-#story-container {
+.story-container {
 	flex-direction: column;
 }
 #prompt-form  {
 	flex-wrap: wrap;
 	justify-content: center;
+	align-content: center;
 }
 #prompt-form label, #prompt-form input {
 width: 15em;
@@ -45,8 +46,11 @@ input {
 	height: 1.2em;
 	display: inline-block;
 	border: none;
-	padding: 0em;
+	padding: 0.5em;
 }
 input:focus {
 	outline: none;
+}
+button img {
+	width: 5em;
 }

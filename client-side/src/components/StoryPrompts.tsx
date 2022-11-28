@@ -9,7 +9,15 @@ interface SetState {
 const StoryPrompts: React.FC<SetState> = ({ currentWords, setCurrentWords }) => {
 	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
 		e.preventDefault();
-		
+		const key = e.target.name;
+		let value = e.target.value;
+		if (value !== "" && (key === "petName" || key === "wizardName")) {
+			let arr = [...value];
+			const first = arr.shift()?.toUpperCase();
+			if (first) arr.unshift(first);
+			value = arr.join("");
+		}
+		setCurrentWords({ ...currentWords, [key]: value });
 	};
 
 	return (
@@ -20,53 +28,63 @@ const StoryPrompts: React.FC<SetState> = ({ currentWords, setCurrentWords }) => 
 					name="creature1"
 					value={currentWords.creature1}
 					onChange={handleChange}
+					placeholder="dragon"
 				/>
 				<label>Pet Name:</label>
-				<input value={"petName"} />
+				<input
+					name="petName"
+					value={currentWords.petName}
+					onChange={handleChange}
+					placeholder="Blurg"
+				/>
 				<label>Adj</label>
-				<input value={"adj"} />
+				<input name="adj1" value={currentWords.adj1} onChange={handleChange} />
 				<label>Name:</label>
-				<input value={"name"} />
+				<input name="wizardName" value={currentWords.wizardName} onChange={handleChange} />
 				<label>Specialty</label>
-				<input value={"specialty"} />
+				<input name="specialty" value={currentWords.specialty} onChange={handleChange} />
 				<label>Place</label>
-				<input value={"placeType"} />
+				<input
+					name="destination"
+					value={currentWords.destination}
+					onChange={handleChange}
+				/>
 				<label>Noun1</label>
-				<input value={"noun"} />
+				<input name="noun1" value={currentWords.noun1} onChange={handleChange} />
 				<label>Noun2</label>
-				<input value={"noun2"} />
+				<input name="noun2" value={currentWords.noun2} onChange={handleChange} />
 				<label>Noun3</label>
-				<input value={"noun3"} />
+				<input name="noun3" value={currentWords.noun3} onChange={handleChange} />
 				<label>Specific Time of Day</label>
-				<input value={"specificTimeOfDay"} />
+				<input name="timeOfDay" value={currentWords.timeOfDay} onChange={handleChange} />
 				<label>Place2</label>
-				<input value={"place2"} />
+				<input name="home" value={currentWords.home} onChange={handleChange} />
 				<label>Adj2</label>
-				<input value={"adj2"} />
+				<input name="adj2" value={currentWords.adj2} onChange={handleChange} />
 				<label>Creature2</label>
-				<input value={"creature2"} />
+				<input name="creature2" value={currentWords.creature2} onChange={handleChange} />
 				<label>PastTense Verb</label>
-				<input value={"pastTenseVerb"} />
+				<input name="pastV1" value={currentWords.pastV1} onChange={handleChange} />
 				<label>Phrase</label>
-				<input value={"phrase"} />
+				<input name="phrase1" value={currentWords.phrase1} onChange={handleChange} />
 				<label>PastTense Verb</label>
-				<input value={"pastTenseVerb"} />
-				<label>Time</label>
-				<input value={"time"} />
+				<input name="pastV2" value={currentWords.pastV2} onChange={handleChange} />
+				<label>Time of Year</label>
+				<input name="timeOfYear" value={currentWords.timeOfYear} onChange={handleChange} />
 				<label>Outfit</label>
-				<input value={"outfit"} />
-				<label>Verb</label>
-				<input value={"verb"} />
-				<label>Adj</label>
-				<input value={"adj"} />
+				<input name="outfit" value={currentWords.outfit} onChange={handleChange} />
+				<label>Present Verb</label>
+				<input name="presentV1" value={currentWords.presentV1} onChange={handleChange} />
+				<label>Adverb</label>
+				<input name="adv" value={currentWords.adv} onChange={handleChange} />
 				<label>Emotion</label>
-				<input value={"emotion"} />
+				<input name="emotion" value={currentWords.emotion} onChange={handleChange} />
 				<label>Phrase 2</label>
-				<input value={"phrase"} />
+				<input name="phrase2" value={currentWords.phrase2} onChange={handleChange} />
 				<label>Past Tense Verb</label>
-				<input value={"pastTenseVerb"} />
+				<input value={currentWords.pastV3} onChange={handleChange} />
 				<label>Present Tense Verb</label>
-				<input value={"presentTenseVerb"} />
+				<input name="presentV2" value={currentWords.presentV2} onChange={handleChange} />
 			</form>
 		</div>
 	);
