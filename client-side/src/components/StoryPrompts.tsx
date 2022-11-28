@@ -53,7 +53,7 @@ const StoryPrompts: React.FC<SetState> = ({ currentWords, setCurrentWords }) => 
 				<input name="noun1" value={currentWords.noun1} onChange={handleChange} />
 				<label>Noun2</label>
 				<input name="noun2" value={currentWords.noun2} onChange={handleChange} />
-				<label>Noun3</label>
+				<label>Noun Plural</label>
 				<input name="noun3" value={currentWords.noun3} onChange={handleChange} />
 				<label>Specific Time of Day</label>
 				<input name="timeOfDay" value={currentWords.timeOfDay} onChange={handleChange} />
@@ -71,7 +71,7 @@ const StoryPrompts: React.FC<SetState> = ({ currentWords, setCurrentWords }) => 
 				<input name="pastV2" value={currentWords.pastV2} onChange={handleChange} />
 				<label>Time of Year</label>
 				<input name="timeOfYear" value={currentWords.timeOfYear} onChange={handleChange} />
-				<label>Outfit</label>
+				<label>Clothing piece</label>
 				<input name="outfit" value={currentWords.outfit} onChange={handleChange} />
 				<label>Present Verb</label>
 				<input name="presentV1" value={currentWords.presentV1} onChange={handleChange} />
@@ -82,7 +82,7 @@ const StoryPrompts: React.FC<SetState> = ({ currentWords, setCurrentWords }) => 
 				<label>Phrase 2</label>
 				<input name="phrase2" value={currentWords.phrase2} onChange={handleChange} />
 				<label>Past Tense Verb</label>
-				<input value={currentWords.pastV3} onChange={handleChange} />
+				<input name="pastV3" value={currentWords.pastV3} onChange={handleChange} />
 				<label>Present Tense Verb</label>
 				<input name="presentV2" value={currentWords.presentV2} onChange={handleChange} />
 			</form>
