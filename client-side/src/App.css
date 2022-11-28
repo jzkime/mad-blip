@@ -51,6 +51,12 @@ input {
 input:focus {
 	outline: none;
 }
+button {
+	background-color: transparent;
+	border: none;
+	border-bottom: 0.5em solid rgb(73, 73, 73);
+}
 button img {
 	width: 5em;
+	height: 5em;
 }
