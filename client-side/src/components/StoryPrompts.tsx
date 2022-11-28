@@ -1,80 +1,59 @@
 import React from "react";
 
 function StoryPrompts() {
-	return <form>
-        <label>Creature 1:
-            <input value={"creature1"}/>
-        </label>
-        <label>Pet Name:
-            <input value={"petName"}/>
-        </label>
-        <label>Adj
-            <input value={"adj"}/>
-        </label>
-        <label>Name:
-            <input value={"name"}/>
-        </label>
-        <label>Specialty
-            <input value={"specialty"}/>
-        </label>
-        <label>Place
-            <input value={"placeType"}/>
-        </label>
-        <label>Noun1
-            <input value={"noun"}/>
-        </label>
-        <label>Noun2
-            <input value={"noun2"}/>
-        </label>
-        <label>Noun3
-            <input value={"noun3"}/>
-        </label>
-        <label>Specific Time of Day
-            <input value={"specificTimeOfDay"}/>
-        </label>
-        <label>Place2
-            <input value={"place2"}/>
-        </label>
-        <label>Adj2
-            <input value={"adj2"}/>
-        </label>
-        <label>Creature2
-            <input value={"creature2"}/>
-        </label>
-        <label>PastTense Verb
-            <input value={"pastTenseVerb"}/>
-        </label>
-        <label>Phrase
-            <input value={"phrase"}/>
-        </label>
-        <label>PastTense Verb
-            <input value={"pastTenseVerb"}/>
-        </label>
-        <label>Time
-            <input value={"time"}/>
-        </label>
-        <label>Outfit
-            <input value={"outfit"}/>
-        </label>
-        <label>Verb
-            <input value={"verb"}/>
-        </label>
-        <label>Adj
-            <input value={"adj"}/>
-        </label>
-        <label>Emotion
-            <input value={"emotion"}/>
-        </label>
-        <label>Phrase 2
-            <input value={"phrase"}/>
-        </label>
-        <label>Past Tense Verb
-            <input value={"pastTenseVerb"}/>
-        </label>
-        <label>Present Tense Verb
-            <input value={"presentTenseVerb"}/>
-        </label>
-        
-    </form>;
+	return (
+		<div id="story-prompt-container">
+			<form id="prompt-form">
+				<label>Creature 1:</label>
+				<input value={"creature1"} />
+				<label>Pet Name:</label>
+				<input value={"petName"} />
+				<label>Adj</label>
+				<input value={"adj"} />
+				<label>Name:</label>
+				<input value={"name"} />
+				<label>Specialty</label>
+				<input value={"specialty"} />
+				<label>Place</label>
+				<input value={"placeType"} />
+				<label>Noun1</label>
+				<input value={"noun"} />
+				<label>Noun2</label>
+				<input value={"noun2"} />
+				<label>Noun3</label>
+				<input value={"noun3"} />
+				<label>Specific Time of Day</label>
+				<input value={"specificTimeOfDay"} />
+				<label>Place2</label>
+				<input value={"place2"} />
+				<label>Adj2</label>
+				<input value={"adj2"} />
+				<label>Creature2</label>
+				<input value={"creature2"} />
+				<label>PastTense Verb</label>
+				<input value={"pastTenseVerb"} />
+				<label>Phrase</label>
+				<input value={"phrase"} />
+				<label>PastTense Verb</label>
+				<input value={"pastTenseVerb"} />
+				<label>Time</label>
+				<input value={"time"} />
+				<label>Outfit</label>
+				<input value={"outfit"} />
+				<label>Verb</label>
+				<input value={"verb"} />
+				<label>Adj</label>
+				<input value={"adj"} />
+				<label>Emotion</label>
+				<input value={"emotion"} />
+				<label>Phrase 2</label>
+				<input value={"phrase"} />
+				<label>Past Tense Verb</label>
+				<input value={"pastTenseVerb"} />
+				<label>Present Tense Verb</label>
+				<input value={"presentTenseVerb"} />
+			</form>
+		</div>
+	);
 }
 export default StoryPrompts;
