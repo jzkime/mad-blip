@@ -1,32 +1,15 @@
 import React from "react";
-import { words } from "../interfaces";
+import { AllWords } from "../interfaces";
 // Story written by jzkime
 
 interface PropWords {
-	currentWords: words;
+	currentWords: AllWords;
 }
 
 const Story: React.FC<PropWords> = ({ currentWords }) => {
-	const { names, creatures, ad, nouns, verbs, misc } = currentWords;
-	const { petName, wizardName } = names;
-	const { creature1, creature2 } = creatures;
-	const {
-		adj: [adj1, adj2],
-		adv,
-	} = ad;
-	const [noun1, noun2, noun3] = nouns;
-	const {
-		pastTense: [pastV1, pastV2, pastV3],
-		present: [presentV1, presentV2],
-	} = verbs;
-	const {
-		specialty,
-		places: { destination, home },
-		times: { ofDay, ofYear },
-		phrases: [phrase1, phrase2],
-		outfit,
-		emotion,
-	} = misc;
+	const { petName, wizardName,creature1, creature2, adj1, adj2, adv, noun1, noun2, noun3, pastV1, pastV2, pastV3, presentV1, presentV2,
+		destination, home, specialty, timeOfDay, timeOfYear, phrase1, phrase2, outfit, emotion } = currentWords;
+
 
 	return (
 		<div id="story-container">
@@ -51,7 +34,7 @@ const Story: React.FC<PropWords> = ({ currentWords }) => {
 			</p>
 			<p>
 				{petName || "name"} packed up several {noun3} for the journey, and at the last
-				moment ({ofDay || "time"}) they were finally able to drag {wizardName || "name"}{" "}
+				moment ({timeOfDay || "time"}) they were finally able to drag {wizardName || "name"}{" "}
 				outside and to their adventure.
 			</p>
 			<p>
@@ -65,7 +48,7 @@ const Story: React.FC<PropWords> = ({ currentWords }) => {
 				Having no idea how to respond to this, {wizardName || "name"} simply{" "}
 				{pastV2 || "pastTenseVerb"}. The creature continued to rattle on, and not soon
 				after, the wizard was pleased to realize that, since they had not left their{" "}
-				{home || "home"} since {ofYear || "timeOfYear"} and since they had never seen this
+				{home || "home"} since {timeOfYear || "timeOfYear"} and since they had never seen this
 				creature before, then that meant that this sorry foe most likely had never heard
 				about {specialty || "specialty"}before.
 			</p>{" "}

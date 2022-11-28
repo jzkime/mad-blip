@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Story from "./Story";
 import StoryPrompts from "./StoryPrompts";
-import { words, initialWords } from '../interfaces'
+import { AllWords, initialWords } from '../interfaces'
 /**
  * Todo:
  *  Button: generate call to backend that will fetch random words
@@ -10,10 +10,10 @@ import { words, initialWords } from '../interfaces'
  */
 
 function ContentContainer() {
-	const [currentWords, setCurrentWords] = useState<words>(initialWords);
+	const [currentWords, setCurrentWords] = useState<AllWords>(initialWords);
 	return (
 		<section id="content-container">
-			<StoryPrompts />
+			<StoryPrompts currentWords={currentWords} setCurrentWords={setCurrentWords} />
 			<Story currentWords={currentWords} />
 		</section>
 	);

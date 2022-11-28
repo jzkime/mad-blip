@@ -1,11 +1,26 @@
-import React from "react";
+import React, { ChangeEvent, Dispatch, SetStateAction } from "react";
+import { AllWords } from "../interfaces";
 
-function StoryPrompts() {
+interface SetState {
+	currentWords: AllWords;
+	setCurrentWords: Dispatch<SetStateAction<AllWords>>;
+}
+
+const StoryPrompts: React.FC<SetState> = ({ currentWords, setCurrentWords }) => {
+	const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+		e.preventDefault();
+		
+	};
+
 	return (
 		<div id="story-prompt-container">
 			<form id="prompt-form">
 				<label>Creature 1:</label>
-				<input value={"creature1"} />
+				<input
+					name="creature1"
+					value={currentWords.creature1}
+					onChange={handleChange}
+				/>
 				<label>Pet Name:</label>
 				<input value={"petName"} />
 				<label>Adj</label>
@@ -55,5 +70,5 @@ function StoryPrompts() {
 			</form>
 		</div>
 	);
-}
+};
 export default StoryPrompts;
