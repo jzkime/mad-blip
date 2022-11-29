@@ -9,4 +9,7 @@ export class PhrasesService {
 	findAllPhrases(): Promise<Array<PhraseShape>> {
 		return this.knex("phrases");
 	}
+	findRandomPhrasesLimited(limit: number): Promise<Array<PhraseShape>> {
+		return this.knex("phrases").orderByRaw("random()").limit(limit);
+	}
 }
