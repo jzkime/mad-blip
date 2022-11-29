@@ -1,18 +1,18 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { WizardController } from './wizard.controller';
+import { Test, TestingModule } from "@nestjs/testing";
+import { WizardController } from "./wizard.controller";
 
-describe('WizardController', () => {
-  let controller: WizardController;
+describe("WizardController", () => {
+	let mainController: WizardController;
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      controllers: [WizardController],
-    }).compile();
+	beforeEach(async () => {
+		const module: TestingModule = await Test.createTestingModule({
+			controllers: [WizardController],
+		}).compile();
 
-    controller = module.get<WizardController>(WizardController);
-  });
+		mainController = module.get<WizardController>(WizardController);
+	});
 
-  it('should be defined', () => {
-    expect(controller).toBeDefined();
-  });
+	it("should be defined", () => {
+		expect(mainController).toBeDefined();
+	});
 });

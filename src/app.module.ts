@@ -1,12 +1,11 @@
 import { Module } from "@nestjs/common";
 import { AppController } from "./app.controller";
-import { AppService } from "./app.service";
 import { KnexModule } from "nest-knexjs";
-import { WizardController } from "./wizard/wizard.controller";
-import { WizardService } from "./wizard/wizard.service";
+import { WizardModule } from "./wizard/wizard.module";
 
 @Module({
 	imports: [
+		WizardModule,
 		KnexModule.forRootAsync({
 			useFactory: () => ({
 				config: {
@@ -19,7 +18,6 @@ import { WizardService } from "./wizard/wizard.service";
 			}),
 		}),
 	],
-	controllers: [AppController, WizardController],
-	providers: [AppService, WizardService],
+	controllers: [AppController],
 })
 export class AppModule {}

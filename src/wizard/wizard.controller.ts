@@ -1,11 +1,9 @@
 import { Controller, Get } from "@nestjs/common";
-import { WizardService } from "./wizard.service";
 
-@Controller("wizard")
+@Controller()
 export class WizardController {
-	constructor(private readonly wizardService: WizardService) {}
 	@Get()
 	getMagic() {
-       return this.wizardService.sayMagic();
-    };
+		return "Welcome to the Wizard endpoint!";
+	}
 }

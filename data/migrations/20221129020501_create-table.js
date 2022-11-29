@@ -26,6 +26,7 @@ exports.up = function (knex) {
 
 exports.down = function (knex) {
 	return knex.schema
+		.dropTableIfExists("phrases")
 		.dropTableIfExists("subjects")
 		.dropTableIfExists("subject_types")
 		.dropTableIfExists("words")
