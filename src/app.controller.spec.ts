@@ -14,7 +14,7 @@ describe('AppController', () => {
 
   describe('root', () => {
     it('should return a welcome message', () => {
-      expect(appController.getHello()).toBe('Welcome to the MadBlip API! try out /wizard');
+      expect(appController.getHello()).toContain('Welcome to the MadBlip API!');
     });
   });
 });
