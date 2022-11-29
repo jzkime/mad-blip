@@ -8,3 +8,9 @@ export enum WordTypes {
 	"verbPast",
 	"verbPresent",
 }
+
+export interface SubjectType {
+	sub_id: number;
+	subject_name: string;
+	subject_type: string;
+}
