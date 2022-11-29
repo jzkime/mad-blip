@@ -2,7 +2,7 @@ exports.up = function (knex) {
 	return knex.schema
 		.createTable("word_types", (tbl) => {
 			tbl.increments("wordtype_id");
-			tbl.string("word_type"); // verb | pastVerb
+			tbl.string("word_type");
 		})
 		.createTable("words", (tbl) => {
 			tbl.increments("word_id");

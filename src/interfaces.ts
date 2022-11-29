@@ -9,6 +9,12 @@ export enum WordTypes {
 	"verbPresent",
 }
 
+export interface WordShape {
+	word_id: number;
+	word: string;
+	word_type: string;
+}
+
 export enum SubjectTypes {
 	"name" = 1,
 	"specialty",
