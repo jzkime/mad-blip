@@ -1,3 +1,5 @@
+/data/wordsDB.sqlite3
+
 # compiled output
 /dist
 /node_modules
