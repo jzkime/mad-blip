@@ -1,6 +1,6 @@
 import { Injectable, NestMiddleware } from "@nestjs/common";
 import { NextFunction, Request, Response } from "express";
-import { SubjectTypes } from "src/interfaces";
+import { SubjectTypes } from "../interfaces";
 @Injectable()
 export class SubjectsMiddleware implements NestMiddleware {
 	use(req: Request, res: Response, next: NextFunction) {
