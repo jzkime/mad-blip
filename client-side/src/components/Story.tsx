@@ -38,71 +38,76 @@ const Story: React.FC<PropWords> = ({ isStoryHidden, currentWords }) => {
 	return (
 		<div className={`story-container`}>
 			<p>
-				Once upon a time, there lived a <b>{creature1 || "creature"}</b> named{" "}
-				<b>{petName || "name"}</b>. {petName || "name"} was the loved friend of a{" "}
-				{adj1 || "adj"} wizard named {wizardName || "name"}. While the beginning of this
-				story seems rather focused on the {creature1 || "creature"}, this story is indeed
-				about this magic folk. Unlike any small town wizard that you might have heard of,
-				this wizard was best known for their proficiency in {specialty || "specialty"}, in
-				which they were entirely masterful. However, this fixed admiration would sometimes
-				be to their own detriment, as they would be so happy partaking in this hobby, that
-				they would hardling think of anything else.
+				Once upon a time, there lived a <u>{adj1 || "adj"}</u> wizard named{" "}
+				<u>{wizardName || "wizName"}</u> and their close friend <u>{petName || "name"}</u> the{" "}
+				<u>{creature1 || "creature"}</u>. <u>{wizardName || "wizName"}</u> was best known for their
+				proficiency in <u>{specialty || "specialty"}</u>, in which they were entirely masterful.
+				However, this fixed admiration would sometimes be to their own detriment, as they
+				would be so happy partaking in this hobby that they would hardly think of anything
+				else.
 			</p>
 			<p>
-				Now, back to {petName || "name"}. {petName || "name"} decided one day to venture out
-				and bring their friend to a lovely little {destination || "place"} deep in the
-				forest that the other creatures in the land loved to boast about. It was said to be
-				a marvel, filled with {noun1 || "noun"} and {noun2 || "noun"} that one could never
-				stop staring at, for as soon as they stepped into the vicinity, they were
-				immediately enthralled in the wonder of the {destination || "place"}.
+				<u>{petName || "name"}</u> decided one day to venture out and bring their friend to a
+				lovely little <u>{destination || "place"}</u> deep in the forest that other creatures loved
+				to boast about. It was said to be a marvel, filled with <u>{noun1 || "noun"}</u> and{" "}
+				<u>{noun2 || "noun"}</u> that one could never stop staring at, for as soon as they stepped
+				into the vicinity, they were immediately enthralled in the wonder of the{" "}
+				<u>{destination || "place"}</u>.
 			</p>
 			<p>
-				For this journey, {petName || "name"} packed up several {noun3}, and at the last
-				moment ({timeOfDay || "time"}) they were finally able to drag {wizardName || "name"}{" "}
-				outside and to their adventure.
+				For this journey, <u>{petName || "name"}</u> packed up several <u>{noun3 || "pluralNoun"}</u>, and
+				at the last moment (<u>{timeOfDay || "time"}</u>) they were finally able to drag{" "}
+				<u>{wizardName || "name"}</u> outside and to their adventure.
 			</p>
 			<p>
-				Now, the trail from their {home || "home"} to the {destination || "place"} was{" "}
-				{adj2 || "adj"}, where beings of magic and trickery would appear out of seemingly
+				The trail from their <u>{home || "home"}</u> to the <u>{destination || "place"}</u> was{" "}
+				<u>{adj2 || "adj"}</u>, where beings of magic and trickery would appear out of seemingly
 				nowhere, and do anything to get an unfortunate traveler's attention. One such being,
-				a {creature2 || "creature"}, {pastV1 || "pastTenseVerb"}
-				out in front of our heroes, and said to them “{phrase1 || "phrase"}”.
+				a <u>{creature2 || "creature"}</u>, <u>{pastV1 || "pastTenseVerb"}</u> out in front of our wizard
+				and <u>{creature1 || "creature1"}</u> duo, and said to them “<u>{phrase1 || "phrase"}</u>”
 			</p>
 			<p>
-				Having no idea how to respond to this, {wizardName || "name"} simply{" "}
-				{pastV2 || "pastTenseVerb"}. The creature continued to rattle on, and not soon
-				after, the wizard was pleased to realize that, since they had not left their{" "}
-				{home || "home"} since {timeOfYear || "timeOfYear"} and since they had never seen
-				this creature before, that meant that this sorry foe most likely had never heard
-				about their love of {specialty || "specialty"} before.
-			</p>{" "}
+				Having no idea how to respond to this, <u>{wizardName || "name"}</u> simply{" "}
+				<u>{pastV2 || "pastTenseVerb"}</u>. The creature continued to rattle on, but soon, the
+				wizard was pleased to realize the last time they left their <u>{home || "home"}</u> was{" "}
+				<u>{timeOfYear || "timeOfYear"}</u>. Because they had never come across this creature until
+				now, that meant this <u>{creature2 || "creature"}</u> had never heard about their love of{" "}
+				<u>{specialty || "specialty"}</u> before.
+			</p>
+			<p>"And that's why-" </p>
 			<p>
-				Oh, how {wizardName || "name"} delighted in their {specialty || "specialty"}{" "}
-				anecdotes. They were enthralled in the ever careful art they loved so dearly, and
-				despite {petName || "name"} constantly tugging on their {outfit || "outfit"} they
-				would not stop.{" "}
+				However, before the <u>{creature2 || "creature2"}</u> could continue their spiel,{" "}
+				<u>{wizardName || "wizName"}</u> held up their hand and asked, "Have you heard of{" "}
+				<u>{specialty || "specialty"}</u>?"
 			</p>
 			<p>
-				As the story continued, the wizard began to notice the {creature2 || "creature"} was
-				peering elsewhere, and had spotted another unsuspecting victim, to which their
-				talons of social entrapment were now being aimed. This made {wizardName || "name"}’s
+				Oh, how <u>{wizardName || "name"}</u> delighted in their anecdotes of{" "}
+				<u>{specialty || "specialty"}</u>. They were enthralled in the ever wonderful subject they
+				loved so dearly, and despite <u>{petName || "name"}</u> constantly tugging on their{" "}
+				<u>{outfit || "outfit"}</u>, once they started sharing they would not stop.{" "}
+			</p>
+			<p>
+				As the story continued, the wizard began to notice the <u>{creature2 || "creature"}</u> was
+				peering elsewhere, where they spotted another unsuspecting victim, to which their
+				talons of social entrapment were now being aimed. This made <u>{wizardName || "name"}</u>’s
 				enthusiasm waver. Unfamiliar with this sensation since finding their love of{" "}
-				{specialty || "specialty"}, their heart began to {presentV1 || "presentVerb"}.
+				<u>{specialty || "specialty"}</u>, their heart began to <u>{presentV1 || "presentVerb"}</u>.
 			</p>
 			<p>
-				As {wizardName || "name"} was caught in this moment, and the new passer-by a perfect
-				distraction, {petName || "name"} was able to {adv || "adverb"} lead {wizardName || "name"} away.{" "}
+				As <u>{wizardName || "name"}</u> was caught in this moment, and the new passer-by a perfect
+				distraction, <u>{petName || "name"}</u> was able to <u>{adv || "adverb"}</u> lead{" "}
+				<u>{wizardName || "name"}</u> away.{" "}
 			</p>
 			<p>
-				By the time they reached the {destination || "place"}, the wizard was{" "}
-				{emotion || "emotion"}. Never before had they experienced their excitement for{" "}
-				{specialty || "specialty"} in such a way. They looked at the {noun1 || "noun"} and{" "}
-				{noun2 || "noun"}, the supposed wonders of this raved about spot, and thought “
-				{phrase2 || "phrase"}”.{" "}
+				By the time they reached the <u>{destination || "place"}</u>, the wizard was{" "}
+				<u>{emotion || "emotion"}</u>. Never before had they experienced their excitement for{" "}
+				<u>{specialty || "specialty"}</u> in such a way. They looked at the <u>{noun1 || "noun"}</u> and{" "}
+				<u>{noun2 || "noun"}</u>, the supposed wonders of this raved about spot, and thought “
+				<u>{phrase2 || "phrase"}</u>”
 			</p>
 			<p>
-				{petName || "name"} {pastV3 || "pastTenseVerb"} {wizardName || "name"} on the back,
-				and they both spent the rest of their journey {presentV2 || "presentVerb"}.
+				<u>{petName || "name"} {pastV3 || "pastTenseVerb"} {wizardName || "name"}</u> on the back,
+				and they both spent the rest of their journey <u>{presentV2 || "presentVerb"}</u>.
 			</p>
 		</div>
 	);
