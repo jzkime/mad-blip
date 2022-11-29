@@ -20,33 +20,40 @@ header a img {
 	flex-wrap: wrap;
 	justify-content: center;
 }
-#content-right, #story-prompt-container {
-	padding: 3rem;
-	width: 50rem;
-	margin: 0 auto;
+#story-prompt-container, #content-right {
+	padding: 3em;
+}
+#content-right {
+	width: 55rem;
+}
+#story-prompt-container {
+	width: 45rem;
 }
 .story-container,
-#prompt-form, #story-prompt-container {
+#prompt-form,
+#story-prompt-container {
 	text-align: left;
 	display: flex;
-	gap: 1em;
+	gap: 0.5em;
 }
 .story-container {
 	flex-direction: column;
+	padding: 1.5em 0;
 }
-#prompt-form  {
+#prompt-form {
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: center;
+	column-gap: 2em;
 }
-#prompt-form label, #prompt-form input {
-width: 15em;
+#prompt-form label,
+ #prompt-form input {
+	width: 15em;
 }
 input {
 	height: 1.2em;
-	display: inline-block;
 	border: none;
-	padding: 0.5em;
+	padding: 0.8em 0.5em;
 }
 input:focus {
 	outline: none;
@@ -55,8 +62,11 @@ button {
 	background-color: transparent;
 	border: none;
 	border-bottom: 0.5em solid rgb(73, 73, 73);
+	box-shadow: rgb(73, 73, 73, 0.45) 0px 25px 20px -20px;
+	width: 100%;
 }
 button img {
 	width: 5em;
 	height: 5em;
+	cursor: pointer;
 }
