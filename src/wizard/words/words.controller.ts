@@ -1,4 +1,5 @@
-import { Controller, Get } from "@nestjs/common";
+import { Controller, Get, Req } from "@nestjs/common";
+import { Request } from "express";
 import { WordsService } from "./words.service";
 @Controller()
 export class WordsController {
@@ -7,5 +8,9 @@ export class WordsController {
 	async getWords() {
         console.log('yo')
 		return await this.wordsService.findAllWords();
+	}
+	@Get('/:type') 
+	async getWordType(@Req() req: Request): Promise<string> {
+		return`return specific type`
 	}
 }
