@@ -8,6 +8,6 @@ import { WordsService } from "./words.service";
 })
 export class WordsModule implements NestModule {
 	configure(consumer: MiddlewareConsumer) {
-		consumer.apply(WordsMiddleware).forRoutes({path: '/wizard/words/:type', method: RequestMethod.GET})
+		consumer.apply(WordsMiddleware).forRoutes({path: '/words/:type', method: RequestMethod.GET})
 	}
 }

@@ -1,7 +1,7 @@
 import { Controller, Get, Req } from "@nestjs/common";
 import { Request } from "express";
 import { WordsService } from "./words.service";
-@Controller()
+@Controller('words')
 export class WordsController {
 	constructor(private readonly wordsService: WordsService) {}
 	@Get()

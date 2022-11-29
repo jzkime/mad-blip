@@ -4,6 +4,6 @@ import { Controller, Get } from '@nestjs/common';
 export class AppController {
   @Get()
   getHello(): string {
-    return `Welcome to the MadBlip API! try out /wizard`
+    return `Welcome to the MadBlip API! Possible endpoints: /words`
   }
 }
