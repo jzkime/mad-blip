@@ -29,3 +29,8 @@ export interface SubjectShape {
 	subject_name: string;
 	subject_type: string;
 }
+
+export interface PhraseShape {
+	phrase_id: number;
+	phrase: string;
+}
