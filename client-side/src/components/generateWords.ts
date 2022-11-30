@@ -22,14 +22,14 @@ const axiosGet = async (path: string, limit?: number) => {
 const changeWords = (
 	keyArray: WordNames[],
 	valueArray: DBShape[],
-	path: keyof typeof DataNames
+	pathType: keyof typeof DataNames
 ) => {
 	const res: OptionalWords = {};
 	for (let index = 0; index < keyArray.length; index++) {
 		// loops through both arrays and assigns matching indexs (as both arrays have same length)
 		// finds the corresponding key name from WordNames and assigns it a value with the matching index
 		res[WordNames[keyArray[index]] as keyof OptionalWords] =
-			valueArray[index][DataNames[path] as keyof DBShape];
+			valueArray[index][DataNames[pathType] as keyof DBShape];
 	}
 	return res;
 };
