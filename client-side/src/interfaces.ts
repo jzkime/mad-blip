@@ -17,8 +17,8 @@ export interface AllWords {
 	specialty: string;
 	timeOfDay: string;
 	timeOfYear: string;
-	home: string;
-	destination: string;
+	place1: string;
+	place2: string;
 	outfit: string;
 	phrase1: string;
 	phrase2: string;
@@ -44,8 +44,8 @@ export enum WordNames {
 	specialty,
 	timeOfDay,
 	timeOfYear,
-	home,
-	destination,
+	place1,
+	place2,
 	outfit,
 	phrase1,
 	phrase2,
@@ -94,8 +94,8 @@ export const initialWords: AllWords = {
 	specialty: "",
 	timeOfDay: "",
 	timeOfYear: "",
-	home: "",
-	destination: "",
+	place1: "",
+	place2: "",
 	outfit: "",
 	phrase1: "",
 	phrase2: "",

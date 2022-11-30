@@ -24,8 +24,8 @@ const Story: React.FC<PropWords> = ({ isStoryHidden, currentWords }) => {
 		pastV3,
 		presentV1,
 		presentV2,
-		destination,
-		home,
+		place1,
+		place2,
 		specialty,
 		timeOfDay,
 		timeOfYear,
@@ -48,11 +48,11 @@ const Story: React.FC<PropWords> = ({ isStoryHidden, currentWords }) => {
 			</p>
 			<p>
 				<u>{petName || "name"}</u> decided one day to venture out and bring their friend to a
-				lovely little <u>{destination || "place"}</u> deep in the forest that other creatures loved
+				lovely little <u>{place1 || "place"}</u> deep in the forest that other creatures loved
 				to boast about. It was said to be a marvel, filled with <u>{noun1 || "noun"}</u> and{" "}
 				<u>{noun2 || "noun"}</u> that one could never stop staring at, for as soon as they stepped
 				into the vicinity, they were immediately enthralled in the wonder of the{" "}
-				<u>{destination || "place"}</u>.
+				<u>{place1 || "place"}</u>.
 			</p>
 			<p>
 				For this journey, <u>{petName || "name"}</u> packed up several <u>{noun3 || "pluralNoun"}</u>, and
@@ -60,7 +60,7 @@ const Story: React.FC<PropWords> = ({ isStoryHidden, currentWords }) => {
 				<u>{wizardName || "name"}</u> outside and to their adventure.
 			</p>
 			<p>
-				The trail from their <u>{home || "home"}</u> to the <u>{destination || "place"}</u> was{" "}
+				The trail from their <u>{place2 || "place2"}</u> to the <u>{place1 || "place"}</u> was{" "}
 				<u>{adj2 || "adj"}</u>, where beings of magic and trickery would appear out of seemingly
 				nowhere, and do anything to get an unfortunate traveler's attention. One such being,
 				a <u>{creature2 || "creature"}</u>, <u>{pastV1 || "pastTenseVerb"}</u> out in front of our wizard
@@ -69,7 +69,7 @@ const Story: React.FC<PropWords> = ({ isStoryHidden, currentWords }) => {
 			<p>
 				Having no idea how to respond to this, <u>{wizardName || "name"}</u> simply{" "}
 				<u>{pastV2 || "pastTenseVerb"}</u>. The creature continued to rattle on, but soon, the
-				wizard was pleased to realize the last time they left their <u>{home || "home"}</u> was{" "}
+				wizard was pleased to realize the last time they left their <u>{place2 || "place2"}</u> was{" "}
 				<u>{timeOfYear || "timeOfYear"}</u>. Because they had never come across this creature until
 				now, that meant this <u>{creature2 || "creature"}</u> had never heard about their love of{" "}
 				<u>{specialty || "specialty"}</u> before.
@@ -99,7 +99,7 @@ const Story: React.FC<PropWords> = ({ isStoryHidden, currentWords }) => {
 				<u>{wizardName || "name"}</u> away.{" "}
 			</p>
 			<p>
-				By the time they reached the <u>{destination || "place"}</u>, the wizard was{" "}
+				By the time they reached the <u>{place1 || "place"}</u>, the wizard was{" "}
 				<u>{emotion || "emotion"}</u>. Never before had they experienced their excitement for{" "}
 				<u>{specialty || "specialty"}</u> in such a way. They looked at the <u>{noun1 || "noun"}</u> and{" "}
 				<u>{noun2 || "noun"}</u>, the supposed wonders of this raved about spot, and thought “

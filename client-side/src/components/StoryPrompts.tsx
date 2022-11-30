@@ -43,7 +43,7 @@ const StoryPrompts: React.FC<SetState> = ({ currentWords, setCurrentWords }) => 
 			<label>Specialty</label>
 			<input name="specialty" value={currentWords.specialty} onChange={handleChange} />
 			<label>Place</label>
-			<input name="destination" value={currentWords.destination} onChange={handleChange} />
+			<input name="destination" value={currentWords.place1} onChange={handleChange} />
 			<label>Noun Plural</label>
 			<input name="noun1" value={currentWords.noun1} onChange={handleChange} />
 			<label>Noun Plural</label>
@@ -53,7 +53,7 @@ const StoryPrompts: React.FC<SetState> = ({ currentWords, setCurrentWords }) => 
 			<label>Specific Time of Day</label>
 			<input name="timeOfDay" value={currentWords.timeOfDay} onChange={handleChange} />
 			<label>Place2</label>
-			<input name="home" value={currentWords.home} onChange={handleChange} />
+			<input name="home" value={currentWords.place2} onChange={handleChange} />
 			<label>Adj2</label>
 			<input name="adj2" value={currentWords.adj2} onChange={handleChange} />
 			<label>Creature2</label>

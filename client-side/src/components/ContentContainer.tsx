@@ -93,6 +93,7 @@ const ContentContainer: React.FC = (): ReactElement => {
 		const specialty = await getWord("subj", SubjectTypes.specialty, [WordNames.specialty]);
 		const timeOfDay = await getWord("subj", SubjectTypes.timeOfDay, [WordNames.timeOfDay]);
 		const timeOfYear = await getWord("subj", SubjectTypes.timeOfYear, [WordNames.timeOfYear]);
+		const places = await getWord("word", WordTypes.nounPlace, [WordNames.place1, WordNames.place2], 2);
 		setCurrentWords({
 			...currentWords,
 			...newAdjs,
@@ -105,6 +106,7 @@ const ContentContainer: React.FC = (): ReactElement => {
 			...specialty,
 			...timeOfDay,
 			...timeOfYear,
+			...places
 		});
 	};
 
