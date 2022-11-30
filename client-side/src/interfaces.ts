@@ -25,6 +25,42 @@ export interface AllWords {
 	emotion: string;
 }
 
+export enum WordNames {
+	wizardName = 1,
+	petName,
+	creature1,
+	creature2,
+	adj1,
+	adj2,
+	adv,
+	noun1,
+	noun2,
+	noun3,
+	pastV1,
+	pastV2,
+	pastV3,
+	presentV1,
+	presentV2,
+	specialty,
+	timeOfDay,
+	timeOfYear,
+	home,
+	destination,
+	outfit,
+	phrase1,
+	phrase2,
+	emotion,
+}
+
+export type OptionalWords = {
+	[Property in keyof AllWords]?: string;
+}
+
+export interface AdjShape {
+	word: string;
+	word_type: string;
+}
+
 export const initialWords: AllWords = {
 	wizardName: "",
 	petName: "",
@@ -49,5 +85,16 @@ export const initialWords: AllWords = {
 	outfit: "",
 	phrase1: "",
 	phrase2: "",
-	emotion: ""
+	emotion: "",
+};
+
+export enum WordTypes {
+	"adjective" = 1,
+	"adverb",
+	"nounThing",
+	"nounThingPlural",
+	"nounPlace",
+	"nounAnimal",
+	"verbPast",
+	"verbPresent",
 }
