@@ -1,5 +1,5 @@
 # mad-blip
-created using: create-react-app, NestJs, Knex, sqlite3, next-knexjs, axios
+created using: create-react-app, NestJs, Knex, sqlite3, next-knexjs, axios <br/>
 story written by: jzkime
 
 ## How to install
@@ -15,4 +15,6 @@ Set up frontend
 3. run `$ npm run start`
 
 ### Created by 
-Jazmine Kime
+Jazmine Kime<br/>
+
+Thank you for your time!
