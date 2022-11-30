@@ -24,30 +24,75 @@ const ContentContainer: React.FC = (): ReactElement => {
 	const [currentWords, setCurrentWords] = useState<AllWords>(initialWords);
 	const [isStoryHidden, setIsStoryHidden] = useState<boolean>(true);
 
-	const axiosGet = (path: string, limit?: number | undefined) => {
+	const axiosGet = (path: string, limit?: number) => {
 		return axios
 			.get(`http://localhost:9000${path}${limit ? `?limit=${limit}` : ""}`)
 			.then((res) => res.data)
 			.catch(console.error);
 	};
-	const changeWords = (keyArray: WordNames[], valueArray: DBShape[], path: keyof typeof DataNames) => {
-		console.log(valueArray)
+	const changeWords = (
+		keyArray: WordNames[],
+		valueArray: DBShape[],
+		path: keyof typeof DataNames
+	) => {
 		const res: OptionalWords = {};
 		for (let index = 0; index < keyArray.length; index++) {
-			res[WordNames[keyArray[index]] as keyof OptionalWords] = valueArray[index][DataNames[path] as keyof DBShape];
+			res[WordNames[keyArray[index]] as keyof OptionalWords] =
+				valueArray[index][DataNames[path] as keyof DBShape];
 		}
 		return res;
 	};
 
-	const getWord = async (path: keyof typeof PathNames, type: WordTypes | SubjectTypes, limit: number, namesReplace: Array<WordNames>) => {
+	const getWord = async (
+		path: keyof typeof PathNames,
+		type: WordTypes | SubjectTypes,
+		namesReplace: Array<WordNames>,
+		limit?: number
+	) => {
 		const replaceWords = await axiosGet(`${PathNames[path]}${type}`, limit);
 		return changeWords(namesReplace, replaceWords, path);
-	}
+	};
 	const handleGenerate = async () => {
-		const newAdjs = await getWord("w", WordTypes.adjective, 2, [WordNames.adj1, WordNames.adj2]);
-		const newNouns = await getWord("w", WordTypes.nounThingPlural, 3, [WordNames.noun1, WordNames.noun2, WordNames.noun3]);
-		const newNames = await getWord("s", SubjectTypes.name, 2, [WordNames.petName, WordNames.wizardName]);
-		setCurrentWords({ ...currentWords, ...newAdjs, ...newNouns, ...newNames });
+		const newAdjs = await getWord(
+			"word",
+			WordTypes.adjective,
+			[WordNames.adj1, WordNames.adj2],
+			2
+		);
+		const newNouns = await getWord(
+			"word",
+			WordTypes.nounThingPlural,
+			[WordNames.noun1, WordNames.noun2, WordNames.noun3],
+			3
+		);
+		const newNames = await getWord(
+			"subj",
+			SubjectTypes.name,
+			[WordNames.petName, WordNames.wizardName],
+			2
+		);
+		const creatures = await getWord(
+			"word",
+			WordTypes.nounAnimal,
+			[WordNames.creature1, WordNames.creature2],
+			2
+		);
+		const adv = await getWord("word", WordTypes.adverb, [WordNames.adv]);
+		const pastVerbs = await getWord(
+			"word",
+			WordTypes.verbPast,
+			[WordNames.pastV1, WordNames.pastV2, WordNames.pastV3],
+			3
+		);
+		setCurrentWords({
+			...currentWords,
+			...newAdjs,
+			...newNouns,
+			...newNames,
+			...creatures,
+			...adv,
+			...pastVerbs,
+		});
 	};
 
 	useEffect(() => {
