@@ -13,10 +13,6 @@ import {
 	PathNames,
 } from "../interfaces";
 import axios from "axios";
-/**
- * Todo:
- *  Button: Clear inputs
- */
 
 const ContentContainer: React.FC = (): ReactElement => {
 	const [currentWords, setCurrentWords] = useState<AllWords>(initialWords);
@@ -158,7 +154,7 @@ const ContentContainer: React.FC = (): ReactElement => {
 				</button>
 
 				{isStoryHidden ? (
-					<Story isStoryHidden={isStoryHidden} currentWords={currentWords} />
+					<Story currentWords={currentWords} />
 				) : <div className="story-container"></div>}
 			</div>
 		</section>
