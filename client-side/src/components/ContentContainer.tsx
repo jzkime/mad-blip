@@ -6,8 +6,11 @@ import {
 	initialWords,
 	WordTypes,
 	OptionalWords,
-	AdjShape,
+	DBShape,
 	WordNames,
+	SubjectTypes,
+	DataNames,
+	PathNames,
 } from "../interfaces";
 import axios from "axios";
 /**
@@ -27,27 +30,24 @@ const ContentContainer: React.FC = (): ReactElement => {
 			.then((res) => res.data)
 			.catch(console.error);
 	};
-	const changeWords = (keyArray: WordNames[], valueArray: AdjShape[]) => {
+	const changeWords = (keyArray: WordNames[], valueArray: DBShape[], path: keyof typeof DataNames) => {
+		console.log(valueArray)
 		const res: OptionalWords = {};
 		for (let index = 0; index < keyArray.length; index++) {
-			res[WordNames[keyArray[index]] as keyof OptionalWords] = valueArray[index].word;
+			res[WordNames[keyArray[index]] as keyof OptionalWords] = valueArray[index][DataNames[path] as keyof DBShape];
 		}
 		return res;
 	};
-	const getAdjs = async () => {
-		const newAdjs = await axiosGet(`/words/${WordTypes.adjective}`, 2);
-		let words = changeWords([WordNames.adj1, WordNames.adj2], newAdjs);
-		return words;
-	};
-	const getNouns = async () => {
-		const newNouns = await axiosGet(`/words/${WordTypes.nounThingPlural}`, 3);
-		let words = changeWords([WordNames.noun1, WordNames.noun2, WordNames.noun3], newNouns);
-		return words;
-	};
+
+	const getWord = async (path: keyof typeof PathNames, type: WordTypes | SubjectTypes, limit: number, namesReplace: Array<WordNames>) => {
+		const replaceWords = await axiosGet(`${PathNames[path]}${type}`, limit);
+		return changeWords(namesReplace, replaceWords, path);
+	}
 	const handleGenerate = async () => {
-		const newAdjs = await getAdjs();
-		const newNouns = await getNouns();
-		setCurrentWords({ ...currentWords, ...newAdjs, ...newNouns });
+		const newAdjs = await getWord("w", WordTypes.adjective, 2, [WordNames.adj1, WordNames.adj2]);
+		const newNouns = await getWord("w", WordTypes.nounThingPlural, 3, [WordNames.noun1, WordNames.noun2, WordNames.noun3]);
+		const newNames = await getWord("s", SubjectTypes.name, 2, [WordNames.petName, WordNames.wizardName]);
+		setCurrentWords({ ...currentWords, ...newAdjs, ...newNouns, ...newNames });
 	};
 
 	useEffect(() => {
@@ -59,6 +59,7 @@ const ContentContainer: React.FC = (): ReactElement => {
 			}
 		}
 		setCurrentWords({ ...currentWords, ...replace });
+		// eslint-disable-next-line
 	}, []);
 
 	useEffect(() => {

@@ -54,12 +54,26 @@ export enum WordNames {
 
 export type OptionalWords = {
 	[Property in keyof AllWords]?: string;
-}
+};
 
-export interface AdjShape {
+export interface WordsShape {
+	word_id: number;
 	word: string;
 	word_type: string;
 }
+
+export interface SubjectsShape {
+	sub_id: number;
+	subject_name: string;
+	subject_type: string;
+}
+
+export interface PhrasesShape {
+	phrase_id: number;
+	phrase: string;
+}
+
+export type DBShape = WordsShape | SubjectsShape | PhrasesShape;
 
 export const initialWords: AllWords = {
 	wizardName: "",
@@ -97,4 +111,25 @@ export enum WordTypes {
 	"nounAnimal",
 	"verbPast",
 	"verbPresent",
+}
+
+export enum SubjectTypes {
+	"name" = 1,
+	"specialty",
+	"timeOfDay",
+	"timeOfYear",
+	"clothing",
+	"emotion",
+}
+
+export enum DataNames {
+	"w" = "word",
+	"s" = "subject_name",
+	"p" = "phrase",
+}
+
+export enum PathNames {
+	"w" = "/words/",
+	"s" = "/subjects/",
+	"p" = "/phrases/random",
 }
