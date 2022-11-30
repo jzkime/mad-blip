@@ -131,5 +131,5 @@ export enum DataNames {
 export enum PathNames {
 	"word" = "/words/",
 	"subj" = "/subjects/",
-	"phra" = "/phrases/random",
+	"phra" = "/phrases",
 }

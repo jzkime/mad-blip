@@ -45,7 +45,7 @@ const ContentContainer: React.FC = (): ReactElement => {
 
 	const getWord = async (
 		path: keyof typeof PathNames,
-		type: WordTypes | SubjectTypes,
+		type: WordTypes | SubjectTypes | "/random",
 		namesReplace: Array<WordNames>,
 		limit?: number
 	) => {
@@ -94,6 +94,9 @@ const ContentContainer: React.FC = (): ReactElement => {
 		const timeOfDay = await getWord("subj", SubjectTypes.timeOfDay, [WordNames.timeOfDay]);
 		const timeOfYear = await getWord("subj", SubjectTypes.timeOfYear, [WordNames.timeOfYear]);
 		const places = await getWord("word", WordTypes.nounPlace, [WordNames.place1, WordNames.place2], 2);
+		const phrases = await getWord("phra", "/random", [WordNames.phrase1, WordNames.phrase2], 2);
+		const outfit = await getWord("subj", SubjectTypes.clothing, [WordNames.outfit]);
+		const emotion = await getWord("subj", SubjectTypes.emotion, [WordNames.emotion]);
 		setCurrentWords({
 			...currentWords,
 			...newAdjs,
@@ -106,7 +109,10 @@ const ContentContainer: React.FC = (): ReactElement => {
 			...specialty,
 			...timeOfDay,
 			...timeOfYear,
-			...places
+			...places,
+			...phrases,
+			...outfit,
+			...emotion
 		});
 	};
 
