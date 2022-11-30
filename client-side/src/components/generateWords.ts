@@ -9,6 +9,7 @@ import {
 } from "../interfaces";
 import axios from "axios";
 
+// calls the API dynamically allowing for the path and query limit
 const axiosGet = async (path: string, limit?: number) => {
 	return await axios
 		.get(`http://localhost:9000${path}${limit ? `?limit=${limit}` : ""}`)
@@ -16,6 +17,8 @@ const axiosGet = async (path: string, limit?: number) => {
 		.catch(console.error);
 };
 
+// matches the key:value pairs of currentWords(keys) to words from the API(values)
+// returns as an object of type OptionalWords
 const changeWords = (
 	keyArray: WordNames[],
 	valueArray: DBShape[],
@@ -23,6 +26,8 @@ const changeWords = (
 ) => {
 	const res: OptionalWords = {};
 	for (let index = 0; index < keyArray.length; index++) {
+		// loops through both arrays and assigns matching indexs (as both arrays have same length)
+		// finds the corresponding key name from WordNames and assigns it a value with the matching index
 		res[WordNames[keyArray[index]] as keyof OptionalWords] =
 			valueArray[index][DataNames[path] as keyof DBShape];
 	}
@@ -35,10 +40,13 @@ const getWord = async (
 	namesReplace: Array<WordNames>,
 	limit?: number
 ) => {
+	// calls the API with the URL link and limit number
 	const replaceWords = await axiosGet(`${PathNames[path]}${type}`, limit);
+	// returns an object with now linked key:value pairs
 	return changeWords(namesReplace, replaceWords, path);
 };
 
+// gets all words required for inputs
 export const generateWords = async () => {
 	const newAdjs = await getWord("word", WordTypes.adjective, [WordNames.adj1, WordNames.adj2], 2);
 	const newNouns = await getWord(
@@ -84,6 +92,7 @@ export const generateWords = async () => {
 	const phrases = await getWord("phra", "/random", [WordNames.phrase1, WordNames.phrase2], 2);
 	const outfit = await getWord("subj", SubjectTypes.clothing, [WordNames.outfit]);
 	const emotion = await getWord("subj", SubjectTypes.emotion, [WordNames.emotion]);
+	// returns singular object with all corresponding key:value pairs
 	return {
 		...newAdjs,
 		...newNouns,
