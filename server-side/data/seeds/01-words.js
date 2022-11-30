@@ -77,7 +77,7 @@ exports.seed = async function(knex) {
     {word: 'phoenix', word_type: 6},
     {word: 'ran', word_type: 7},
     {word: 'smacked', word_type: 7},
-    {word: 'patted', word_type: 7},
+    {word: 'looked', word_type: 7},
     {word: 'shook', word_type: 7},
     {word: 'laughed', word_type: 7},
     {word: 'jumped', word_type: 7},
