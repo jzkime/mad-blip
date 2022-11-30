@@ -15,8 +15,6 @@ import {
 import axios from "axios";
 /**
  * Todo:
- *  Button: generate call to backend that will fetch random words
- *  Story Component: pass in words
  *  Button: Clear inputs
  */
 
@@ -93,7 +91,12 @@ const ContentContainer: React.FC = (): ReactElement => {
 		const specialty = await getWord("subj", SubjectTypes.specialty, [WordNames.specialty]);
 		const timeOfDay = await getWord("subj", SubjectTypes.timeOfDay, [WordNames.timeOfDay]);
 		const timeOfYear = await getWord("subj", SubjectTypes.timeOfYear, [WordNames.timeOfYear]);
-		const places = await getWord("word", WordTypes.nounPlace, [WordNames.place1, WordNames.place2], 2);
+		const places = await getWord(
+			"word",
+			WordTypes.nounPlace,
+			[WordNames.place1, WordNames.place2],
+			2
+		);
 		const phrases = await getWord("phra", "/random", [WordNames.phrase1, WordNames.phrase2], 2);
 		const outfit = await getWord("subj", SubjectTypes.clothing, [WordNames.outfit]);
 		const emotion = await getWord("subj", SubjectTypes.emotion, [WordNames.emotion]);
@@ -112,7 +115,7 @@ const ContentContainer: React.FC = (): ReactElement => {
 			...places,
 			...phrases,
 			...outfit,
-			...emotion
+			...emotion,
 		});
 	};
 
@@ -139,7 +142,10 @@ const ContentContainer: React.FC = (): ReactElement => {
 	return (
 		<section id="content-container">
 			<div id="story-prompt-container">
-				<button onClick={handleGenerate}>generate</button>
+				<div id="prompt-top">
+					<button onClick={handleGenerate}>generate</button>
+					<button onClick={() => setCurrentWords(initialWords)}>clear</button>
+				</div>
 				<StoryPrompts currentWords={currentWords} setCurrentWords={setCurrentWords} />
 			</div>
 			<div id="content-right">
@@ -151,9 +157,9 @@ const ContentContainer: React.FC = (): ReactElement => {
 					)}
 				</button>
 
-				{!isStoryHidden && (
+				{isStoryHidden ? (
 					<Story isStoryHidden={isStoryHidden} currentWords={currentWords} />
-				)}
+				) : <div className="story-container"></div>}
 			</div>
 		</section>
 	);
