@@ -84,6 +84,15 @@ const ContentContainer: React.FC = (): ReactElement => {
 			[WordNames.pastV1, WordNames.pastV2, WordNames.pastV3],
 			3
 		);
+		const presentVerbs = await getWord(
+			"word",
+			WordTypes.verbPresent,
+			[WordNames.presentV1, WordNames.presentV2],
+			2
+		);
+		const specialty = await getWord("subj", SubjectTypes.specialty, [WordNames.specialty]);
+		const timeOfDay = await getWord("subj", SubjectTypes.timeOfDay, [WordNames.timeOfDay]);
+		const timeOfYear = await getWord("subj", SubjectTypes.timeOfYear, [WordNames.timeOfYear]);
 		setCurrentWords({
 			...currentWords,
 			...newAdjs,
@@ -92,6 +101,10 @@ const ContentContainer: React.FC = (): ReactElement => {
 			...creatures,
 			...adv,
 			...pastVerbs,
+			...presentVerbs,
+			...specialty,
+			...timeOfDay,
+			...timeOfYear,
 		});
 	};
 
