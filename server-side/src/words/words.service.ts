@@ -12,9 +12,9 @@ export class WordsService {
 			.select("w.word_id", "w.word", "wt.word_type");
 	}
 	async findWordsOfType(type: WordTypes, limit: number): Promise<Array<WordShape>> {
-		return await this.knex("words AS w")
-			.leftJoin("word_types AS wt", "wt.wordtype_id", "=", "w.word_type")
-			.select("w.word", "wt.word_type")
+		return await this.knex("words as w")
+			.leftJoin("word_types as wt", "wt.wordtype_id", "=", "w.word_type")
+			.select("w.word_id", "w.word", "wt.word_type")
 			.orderByRaw("random()")
 			.limit(limit)
 			.where("wt.wordtype_id", type);
