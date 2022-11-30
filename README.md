@@ -13,5 +13,6 @@ Set up frontend
 2. run `$ npm ci`
 3. run `$ npm run start`
 
+story written by: jzkime
 ## Created by 
 Jazmine Kime
