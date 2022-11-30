@@ -11,16 +11,24 @@ html {
 	height: 100vh;
 }
 header {
+	background-color: rgb(101, 116, 171);
+	height: 7rem;
+}
+header a {
 	display: flex;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
-	background-color: rgb(101, 116, 171);
-	height: 6rem;
 }
 header a img {
-	width: 3em;
 	margin: 1em;
+}
+header a img:nth-of-type(1) {
+	margin-top: 1.5em;
+	width: 10em;
+}
+header a img:nth-of-type(2) {
+	width: 3.3em;
 }
 #content-container {
 	min-height: calc(100% - 6rem);
@@ -29,6 +37,7 @@ header a img {
 	justify-content: center;
 	align-content: center;
 	padding: 1em;
+	gap: 2em;
 }
 #story-prompt-container {
 	width: 45rem;
