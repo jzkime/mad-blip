@@ -38,7 +38,7 @@ const Story: React.FC<PropWords> = ({ currentWords }): ReactElement => {
 		<div className={`story-container`}>
 			<p>
 				Once upon a time, there lived a <u>{adj1 || "adj"}</u> wizard named{" "}
-				<u>{wizardName || "wizName"}</u> and their close friend <u>{petName || "name"}</u>{" "}
+				<u>{wizardName || "wizName"}</u>, and their close friend <u>{petName || "name"}</u>{" "}
 				the <u>{creature1 || "creature"}</u>. <u>{wizardName || "wizName"}</u> was best
 				known for their proficiency in <u>{specialty || "specialty"}</u>, in which they were
 				entirely masterful. However, this fixed admiration would sometimes be to their own
@@ -100,7 +100,7 @@ const Story: React.FC<PropWords> = ({ currentWords }): ReactElement => {
 			<p>
 				As <u>{wizardName || "name"}</u> was caught in this moment, and the new passer-by a
 				perfect distraction, <u>{petName || "name"}</u> was able to <u>{adv || "adverb"}</u>{" "}
-				lead <u>{wizardName || "name"}</u> away.{" "}
+				lead <u>{wizardName || "name"}</u> away.
 			</p>
 			<p>
 				By the time they reached the <u>{place1 || "place"}</u>, the wizard was{" "}
@@ -112,7 +112,7 @@ const Story: React.FC<PropWords> = ({ currentWords }): ReactElement => {
 			<p>
 				<u>
 					{petName || "name"} {pastV3 || "pastTenseVerb"} {wizardName || "name"}
-				</u>{" "}
+				</u>
 				on the back, and they both spent the rest of their journey{" "}
 				<u>{presentV2 || "presentVerb"}</u>.
 			</p>

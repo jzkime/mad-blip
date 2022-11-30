@@ -43,17 +43,17 @@ const ContentContainer: React.FC = (): ReactElement => {
 		<section id="content-container">
 			<div id="story-prompt-container">
 				<div id="prompt-top">
-					<button onClick={handleGenerate}>generate</button>
-					<button onClick={() => setCurrentWords(initialWords)}>clear</button>
+					<button onClick={handleGenerate}><div id="generateButton"></div></button>
+					<button onClick={() => setCurrentWords(initialWords)}><div id="clearButton"></div></button>
 				</div>
 				<StoryPrompts currentWords={currentWords} setCurrentWords={setCurrentWords} />
 			</div>
 			<div id="content-right">
 				<button onClick={() => setIsStoryHidden(!isStoryHidden)}>
 					{isStoryHidden ? (
-						<img src="closeEye.png" alt="a closed eye" />
-					) : (
 						<img src="openEye.png" alt="an openned eye" />
+						) : (
+						<img src="closeEye.png" alt="a closed eye" />
 					)}
 				</button>
 

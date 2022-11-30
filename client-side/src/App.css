@@ -2,7 +2,6 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: "Roboto Slab", serif;
-	font-weight: 500;
 }
 html {
 	background-color: rgb(218, 229, 252);
@@ -74,17 +73,33 @@ input {
 input:focus {
 	outline: none;
 }
-button {
-	background-color: rgb(169, 183, 221);
-	border: none;
+#generateButton {
+	background-image: url("../public/generateButton.png");
+}
+#clearButton {
+	background-image: url("../public/clearButton.png");
+}
+#generateButton,
+#clearButton {
+	width: 10em;
+	background-size: 10em;
+	background-size: 10em;
+	background-repeat: no-repeat;
+	height: 5.3em;
+	background-position: -0.1em;
+}
+#prompt-top button {
 	box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px,
-		rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
-		rgba(0, 0, 0, 0.07) 0px 16px 16px;
-	width: 10rem;
-	padding: 1.5em;
+	rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px,
+	rgba(0, 0, 0, 0.07) 0px 16px 16px;
+}
+button {
+	border: none;
+	background-color: transparent;
+	width: 9.77em;
+	padding: 0;
 	cursor: pointer;
-	border-radius: 2em;
-	box-shadow: rgb(73, 73, 73, 0.45) 0px 25px 20px -20px;
+	border-radius: 1.1em 1.3em;
 	transition: 0.2s ease-in-out;
 }
 button:hover {
@@ -99,7 +114,7 @@ button:hover {
 	width: 100%;
 	margin-bottom: 1.5em;
 }
-button img {
+#content-right button img {
 	width: 5em;
 	height: 5em;
 }
