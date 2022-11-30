@@ -57,7 +57,7 @@ header a img:nth-of-type(2) {
 	width: 55rem;
 }
 .story-container {
-	min-height: 50em;
+	min-height: 46em;
 }
 #prompt-form {
 	flex-wrap: wrap;
