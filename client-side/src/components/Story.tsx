@@ -50,7 +50,7 @@ const Story: React.FC<PropWords> = ({ currentWords }): ReactElement => {
 				a lovely little <u>{place1 || "place"}</u> deep in the forest that other creatures
 				loved to boast about. It was said to be a marvel, filled with{" "}
 				<u>{noun1 || "noun"}</u> and <u>{noun2 || "noun"}</u> that one could never stop
-				staring at, for as soon as they stepped into the vicinity, they were immediately
+				admiring, for as soon as they stepped into the vicinity, they were immediately
 				enthralled in the wonder of the <u>{place1 || "place"}</u>.
 			</p>
 			<p>
@@ -69,11 +69,11 @@ const Story: React.FC<PropWords> = ({ currentWords }): ReactElement => {
 			</p>
 			<p>
 				Having no idea how to respond to this, <u>{wizardName || "name"}</u> simply{" "}
-				<u>{pastV2 || "pastTenseVerb"}</u>. The creature continued to rattle on, but soon,
+				<u>{pastV2 || "pastTenseVerb"}</u>. The creature began to speak boisterously, but soon,
 				the wizard was pleased to realize the last time they left their{" "}
-				<u>{place2 || "place2"}</u> was <u>{timeOfYear || "timeOfYear"}</u>. Because they
-				had never come across this creature until now, that meant this{" "}
-				<u>{creature2 || "creature"}</u> had never heard about their love of{" "}
+				<u>{place2 || "place2"}</u> was <u>{timeOfYear || "timeOfYear"}</u>. And, because they
+				have never come across this creature until now, that meant this{" "}
+				<u>{creature2 || "creature"}</u> has not heard about their love of{" "}
 				<u>{specialty || "specialty"}</u> before.
 			</p>
 			<p>"And that's why-"</p>
@@ -95,7 +95,7 @@ const Story: React.FC<PropWords> = ({ currentWords }): ReactElement => {
 				unsuspecting victim, to which their talons of social entrapment were now being
 				aimed. This made <u>{wizardName || "name"}</u>’s enthusiasm waver. Unfamiliar with
 				this sensation since finding their love of <u>{specialty || "specialty"}</u>, their
-				heart began to <u>{presentV1 || "presentVerb"}</u>.
+				heart began <u>{presentV1 || "presentVerb"}</u>.
 			</p>
 			<p>
 				As <u>{wizardName || "name"}</u> was caught in this moment, and the new passer-by a
@@ -110,11 +110,9 @@ const Story: React.FC<PropWords> = ({ currentWords }): ReactElement => {
 				raved about spot, and thought “<u>{phrase2 || "phrase"}</u>”
 			</p>
 			<p>
-				<u>
-					{petName || "name"} {pastV3 || "pastTenseVerb"} {wizardName || "name"}
-				</u>
-				on the back, and they both spent the rest of their journey{" "}
-				<u>{presentV2 || "presentVerb"}</u>.
+				<u>{petName || "name"}</u> <u>{pastV3 || "pastTenseVerb"}</u> and pat{" "}
+				<u>{wizardName || "name"}</u> on the back, and they both spent the rest of their
+				journey <u>{presentV2 || "presentVerb"}</u>.
 			</p>
 		</div>
 	);
