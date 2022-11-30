@@ -3,28 +3,28 @@ NestJs database, using Knex and nest-knexjs
 
 ## endpoints:
 ### Words
-> `/words`
-Returns the entire words table in the database
+> `/words`<br/>
+Returns the entire words table in the database<br/>
 
-> `/words/:type` (number) && `/words/#?limit=`
-Returns random words of the specified type
-Limit defaults to 1
+> `/words/:type` (number) && `/words/#?limit=`<br/>
+Returns random words of the specified type<br/>
+Limit defaults to 1<br/>
 
 ### Subjects
-> `/subjects`
-Returns the entire subjects table in the database
+> `/subjects`<br/>
+Returns the entire subjects table in the database<br/>
 
-> `/subjects/:type` (number) && `/subjects/:type?limit=`
-Returns random subject data with the corresponding /:type
-Limit defaults to 1
+> `/subjects/:type` (number) && `/subjects/:type?limit=`<br/>
+Returns random subject data with the corresponding /:type<br/>
+Limit defaults to 1<br/>
 
 ### Phrases
-> `/phrases`
-Returns entire phrases table from the database
+> `/phrases`<br/>
+Returns entire phrases table from the database<br/>
 
-> `/phrases/random && /phrases/random?limit=`
-Returns random phrase data from database
-Limit defaults to 1
+> `/phrases/random && /phrases/random?limit=`<br/>
+Returns random phrase data from database<br/>
+Limit defaults to 1<br/>
 
 ### Created By
 Jazmine Kime
