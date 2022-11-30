@@ -6,17 +6,18 @@ import { WordShape } from "src/interfaces";
 @Injectable()
 export class WordsService {
 	constructor(@InjectConnection() private readonly knex: Knex) {}
-	findAllWords(): Promise<Array<WordShape>> {
-		return this.knex("words as w")
+
+	KnexWords() {
+		return this.knex<Array<WordShape>>("words as w")
 			.leftJoin("word_types as wt", "w.word_type", "=", "wt.wordtype_id")
 			.select("w.word_id", "w.word", "wt.word_type");
 	}
-	async findWordsOfType(type: WordTypes, limit: number): Promise<Array<WordShape>> {
-		return await this.knex("words as w")
-			.leftJoin("word_types as wt", "wt.wordtype_id", "=", "w.word_type")
-			.select("w.word_id", "w.word", "wt.word_type")
-			.orderByRaw("random()")
-			.limit(limit)
-			.where("wt.wordtype_id", type);
+
+	findAllWords(): Promise<Array<WordShape>> {
+		return this.KnexWords();
+	}
+
+	findWordsOfType(type: WordTypes, limit: number): Promise<Array<WordShape>> {
+		return this.KnexWords().orderByRaw("random()").limit(limit).where("wt.wordtype_id", type);
 	}
 }
