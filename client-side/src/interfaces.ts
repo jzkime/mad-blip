@@ -123,13 +123,13 @@ export enum SubjectTypes {
 }
 
 export enum DataNames {
-	"w" = "word",
-	"s" = "subject_name",
-	"p" = "phrase",
+	"word" = "word",
+	"subj" = "subject_name",
+	"phra" = "phrase",
 }
 
 export enum PathNames {
-	"w" = "/words/",
-	"s" = "/subjects/",
-	"p" = "/phrases/random",
+	"word" = "/words/",
+	"subj" = "/subjects/",
+	"phra" = "/phrases/random",
 }
