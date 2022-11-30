@@ -1,5 +1,6 @@
 # mad-blip
-created using: create-react-app, NestJs, Knex, sqlite3, next-knexjs
+created using: create-react-app, NestJs, Knex, sqlite3, next-knexjs, axios
+story written by: jzkime
 
 ## How to install
 Set up backend
@@ -13,6 +14,5 @@ Set up frontend
 2. run `$ npm ci`
 3. run `$ npm run start`
 
-story written by: jzkime
-## Created by 
+### Created by 
 Jazmine Kime
