@@ -1,7 +1,7 @@
 # mad-blip
-A single page application that mimicks the interactive story telling of a Mad Libs tale.<br/>
+A single page application that mimics the interactive story telling of a Mad Libs tale.<br/>
 <br/>
-created using: create-react-app, NestJs, Knex, sqlite3, next-knexjs, axios <br/>
+created using: React, NestJs, Knex, sqlite3, next-knexjs, axios <br/>
 story written by: jzkime
 
 ## How to install
